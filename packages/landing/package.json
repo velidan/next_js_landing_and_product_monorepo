@@ -3,10 +3,30 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev  -p 3002",
+    "dev": "next dev  -p 3001",
     "build": "next build",
-    "start": "next start  -p 3002",
-    "lint": "next lint"
+    "start": "next start  -p 3001",
+    "prettier": "prettier --write .",
+    "prepare": "husky install",
+    "lint": "next lint",
+    "ts-lint": "tsc --noEmit --incremental",
+    "ts-lint:watch": "tsc --noEmit --incremental --watch"
+  },
+  "engines": {
+    "node": ">=14.0.0",
+    "yarn": ">=1.22.0",
+    "npm": "please-use-yarn"
+  },
+  "resolutions": {
+    "webpack": "^5"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx, jsx}": [
+      "eslint --quiet --fix"
+    ],
+    "*.{json,md,html,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "@10x/foundation": "*",
