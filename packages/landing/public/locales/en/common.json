@@ -1,0 +1,13 @@
+{
+  "search": "Search",
+  "home": {
+    "label": "Home",
+    "welcome": "Hello world. Home page!"
+  },
+  "about": {
+    "label": "About"
+  },
+  "contact": {
+    "label": "Contact"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "search": "Búsqueda",
+
+  "home": {
+    "label": "Hogar",
+    "welcome": "Hola Mundo. ¡Página de inicio!"
+  },
+  "about": {
+    "label": "Sobre"
+  },
+  "contact": {
+    "label": "Contacto"
+  }
+}
