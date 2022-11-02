@@ -1,4 +1,4 @@
-.yarn
-.next
 dist
+lib
 node_modules
+.github

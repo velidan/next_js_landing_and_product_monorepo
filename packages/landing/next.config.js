@@ -1,12 +1,12 @@
-const withTM = require("next-transpile-modules")(["@10x/foundation"])
+const withTM = require('next-transpile-modules')(['@10x/foundation']);
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
-    webpack: (config) => {
+  webpack: (config) => {
     // custom webpack config
-    return config
+    return config;
   },
   images: {},
-}
+};
 
 module.exports = withTM(nextConfig);
