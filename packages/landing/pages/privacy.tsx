@@ -6,7 +6,7 @@ import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 
 // type GsspPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-export default function Privacy(props: any) {
+export default function Privacy() {
   const { t } = useTranslation();
 
   return (

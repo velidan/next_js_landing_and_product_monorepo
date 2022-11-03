@@ -6,7 +6,7 @@ import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 
 // type GsspPageProps = InferGetServerSidePropsType<typeof getServerSideProps>;
 
-export default function Contact(props: any) {
+export default function Contact() {
   const { t } = useTranslation();
 
   return (

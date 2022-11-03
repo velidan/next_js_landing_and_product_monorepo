@@ -1,4 +1,5 @@
 import { useTranslation } from 'next-i18next';
+import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import LangSelect from './LangSelect';
@@ -21,10 +22,12 @@ export default function Navbar() {
             <Link href="/">
               <>
                 <span className="sr-only">{t('home.label')}</span>
-                <img
+                <Image
                   className="h-10 w-auto"
-                  src="https://tailwindui.com/img/logos/mark.svg?color=white"
-                  alt=""
+                  src="https://example.com/test"
+                  alt="Company logo"
+                  width={47}
+                  height={40}
                 />
               </>
             </Link>
