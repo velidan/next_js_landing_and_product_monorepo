@@ -6,6 +6,7 @@ export const supportedLocalesData = {
 
 // for ni18n.config.js
 export const supportedLocales = Object.keys(supportedLocalesData);
+export const defaultLocale = 'en';
 
 export type Locales = 'es' | 'en';
 

@@ -1,4 +1,5 @@
 const withTM = require('next-transpile-modules')(['@10x/foundation']);
+
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
@@ -7,6 +8,10 @@ const nextConfig = {
     return config;
   },
   images: {},
+  i18n: {
+    locales: ['en', 'es'],
+    defaultLocale: 'en',
+  },
 };
 
 module.exports = withTM(nextConfig);

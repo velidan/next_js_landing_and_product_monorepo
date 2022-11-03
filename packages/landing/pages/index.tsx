@@ -1,15 +1,17 @@
 import { Button } from '@10x/foundation/src/components';
 
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
+import LocaleSwitcher from '../components/LocaleSwitcher';
 
-import { Locales, supportedLocalesData } from '../config/locales.config';
+import { supportedLocalesData } from '../config/locales.config';
 
 // TODO: Lang enum in case of bigger lang amount
-const changeLanguage = (i18n: any, locale: Locales) => {
-  window.localStorage.setItem('user_locale', locale);
-  i18n.changeLanguage(locale);
-};
+// const changeLanguage = (i18n: any, locale: Locales) => {
+//   window.localStorage.setItem('user_locale', locale);
+//   i18n.changeLanguage(locale);
+// };
 
 export interface ISidebarLayout {}
 
@@ -33,7 +35,7 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
                 fontWeight: i18n.resolvedLanguage === lng ? 'bold' : 'normal',
               }}
               type="submit"
-              onClick={() => changeLanguage(i18n, lng as Locales)}
+              // onClick={() => changeLanguage(i18n, lng as Locales)}
             >
               {(supportedLocalesData as any)[lng].nativeName}
             </button>
@@ -45,6 +47,8 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
 };
 
 export default function Home() {
+  const router = useRouter();
+  const { locale, locales, defaultLocale } = router;
   return (
     <div>
       <Button />
@@ -54,6 +58,23 @@ export default function Home() {
         </div>
       </section>
       <SidebarLayout />
+      <div>
+        <h1>Index page</h1>
+        <p>Current locale: {locale}</p>
+        <p>Default locale: {defaultLocale}</p>
+        <p>Configured locales: {JSON.stringify(locales)}</p>
+
+        <LocaleSwitcher />
+
+        <Link href="/gsp">To getStaticProps page</Link>
+        <br />
+
+        <Link href="/gsp/first">To dynamic getStaticProps page</Link>
+        <br />
+
+        <Link href="/gssp">To getServerSideProps page</Link>
+        <br />
+      </div>
     </div>
   );
 }
