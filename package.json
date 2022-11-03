@@ -11,6 +11,7 @@
     "product:build": "cross-env NODE_ENV=production lerna run build --scope=product --stream",
     "foundation:build": "lerna run build --scope=@10x/foundation --stream",
     "foundation:storybook": "lerna run storybook --scope=@10x/foundation --stream",
+    "foundation:chromatic": "lerna run chromatic --scope=@10x/foundation --stream",
     "pre:push": "echo \"Pre Push \" && exit 1",
     "lint": "lerna run lint"
   },
