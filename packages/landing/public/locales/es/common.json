@@ -10,5 +10,8 @@
   },
   "contact": {
     "label": "Contacto"
+  },
+  "privacy": {
+    "label": "Privacidad"
   }
 }

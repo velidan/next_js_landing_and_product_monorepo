@@ -5,6 +5,7 @@ import { useRouter } from 'next/router';
 import { useTranslation } from 'react-i18next';
 import LocaleSwitcher from '../components/LocaleSwitcher';
 
+import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 import { supportedLocalesData } from '../config/locales.config';
 
 // TODO: Lang enum in case of bigger lang amount
@@ -50,31 +51,33 @@ export default function Home() {
   const router = useRouter();
   const { locale, locales, defaultLocale } = router;
   return (
-    <div>
-      <Button />
-      <section className="flex flex-1 bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 ">
-        <div>
-          <h1>Landing</h1>
-        </div>
-      </section>
-      <SidebarLayout />
+    <PrimaryLayout>
       <div>
-        <h1>Index page</h1>
-        <p>Current locale: {locale}</p>
-        <p>Default locale: {defaultLocale}</p>
-        <p>Configured locales: {JSON.stringify(locales)}</p>
+        <Button />
+        <section className="flex flex-1 bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 ">
+          <div>
+            <h1>Landing</h1>
+          </div>
+        </section>
+        <SidebarLayout />
+        <div>
+          <h1>Index page</h1>
+          <p>Current locale: {locale}</p>
+          <p>Default locale: {defaultLocale}</p>
+          <p>Configured locales: {JSON.stringify(locales)}</p>
 
-        <LocaleSwitcher />
+          <LocaleSwitcher />
 
-        <Link href="/gsp">To getStaticProps page</Link>
-        <br />
+          <Link href="/gsp">To getStaticProps page</Link>
+          <br />
 
-        <Link href="/gsp/first">To dynamic getStaticProps page</Link>
-        <br />
+          <Link href="/gsp/first">To dynamic getStaticProps page</Link>
+          <br />
 
-        <Link href="/gssp">To getServerSideProps page</Link>
-        <br />
+          <Link href="/gssp">To getServerSideProps page</Link>
+          <br />
+        </div>
       </div>
-    </div>
+    </PrimaryLayout>
   );
 }

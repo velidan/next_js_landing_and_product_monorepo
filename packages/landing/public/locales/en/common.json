@@ -9,5 +9,8 @@
   },
   "contact": {
     "label": "Contact"
+  },
+  "privacy": {
+    "label": "Privacy"
   }
 }
