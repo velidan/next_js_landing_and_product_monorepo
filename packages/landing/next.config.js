@@ -7,7 +7,9 @@ const nextConfig = {
     // custom webpack config
     return config;
   },
-  images: {},
+  images: {
+    domains: ['tailwindui.com'],
+  },
   i18n: {
     locales: ['en', 'es'],
     defaultLocale: 'en',

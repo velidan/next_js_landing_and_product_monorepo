@@ -10,6 +10,10 @@ const navigation = [
   { name: 'privacy.label', href: '/privacy' },
 ];
 
+const myLoader = ({ src }: any) => {
+  return `https://tailwindui.com/img/logos/${src}?color=white`;
+};
+
 export default function Navbar() {
   const { t } = useTranslation();
   const router = useRouter();
@@ -24,7 +28,8 @@ export default function Navbar() {
                 <span className="sr-only">{t('home.label')}</span>
                 <Image
                   className="h-10 w-auto"
-                  src="https://example.com/test"
+                  loader={myLoader}
+                  src="mark.svg"
                   alt="Company logo"
                   width={47}
                   height={40}

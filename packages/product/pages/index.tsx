@@ -1,5 +1,3 @@
-import { Button } from '@10x/foundation/src/components';
-
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 
@@ -18,11 +16,27 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
 
   return (
     <div>
-      <nav>
-        <Link href="/">{t('home.label')}</Link>
-        <Link href="/about">{t('about.label')}</Link>
-        <Link href="/contact">{t('contact.label')}</Link>
+      <nav style={{ display: 'flex', margin: '20px 0' }}>
+        <Link
+          style={{ border: '1px solid yellow', marginRight: 20, padding: 5 }}
+          href="/"
+        >
+          {t('home.label')}
+        </Link>
+        <Link
+          style={{ border: '1px solid yellow', marginRight: 20, padding: 5 }}
+          href="/about"
+        >
+          {t('about.label')}
+        </Link>
+        <Link
+          style={{ border: '1px solid yellow', marginRight: 20, padding: 5 }}
+          href="/contact"
+        >
+          {t('contact.label')}
+        </Link>
       </nav>
+
       <div>
         <span className="isolate inline-flex rounded-md shadow-sm">
           {Object.keys(supportedLocalesData).map((lng) => (
@@ -47,13 +61,15 @@ const SidebarLayout: React.FC<ISidebarLayout> = () => {
 export default function Home() {
   return (
     <div>
-      <Button />
-      <section className="flex flex-1 bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 ">
+      <section className="mb-10 flex flex-1 flex-col bg-sky-700 px-4 py-2 text-white hover:bg-sky-800 sm:px-8 sm:py-3 ">
         <div>
           <h1>Product</h1>
         </div>
         <SidebarLayout />
       </section>
+      <div className="flex flex-1 justify-center">
+        {/* Button must be here */}
+      </div>
     </div>
   );
 }
