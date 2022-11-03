@@ -1,6 +1,7 @@
 import type { AppProps } from 'next/app';
-import { appWithI18Next } from 'ni18n';
-import { ni18nConfig } from '../ni18n.config';
+// import { appWithI18Next } from 'ni18n';
+// import { ni18nConfig } from '../ni18n.config';
+import { appWithTranslation } from 'next-i18next';
 import '../styles/globals.css';
 
 // TODO: remove any for the pageProps.messages that comes from the nextIntl
@@ -17,4 +18,5 @@ function MyApp({ Component, pageProps }: AppProps & any) {
   return getLayout(<Component {...pageProps} />);
 }
 
-export default appWithI18Next(MyApp, ni18nConfig);
+// export default appWithI18Next(MyApp, ni18nConfig);
+export default appWithTranslation(MyApp);

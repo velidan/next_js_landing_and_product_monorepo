@@ -1,6 +1,7 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
-import { useTranslation } from 'react-i18next';
+import LangSelect from './LangSelect';
 
 const navigation = [
   { name: 'about.label', href: '/about' },
@@ -9,16 +10,8 @@ const navigation = [
 ];
 
 export default function Navbar() {
-  const { t, i18n } = useTranslation('common');
+  const { t } = useTranslation();
   const router = useRouter();
-
-  const handleLocaleChange = (event: any) => {
-    const value = event.target.value;
-
-    router.push(router.route, router.asPath, {
-      locale: value,
-    });
-  };
 
   return (
     <header className="bg-indigo-600">
@@ -27,7 +20,7 @@ export default function Navbar() {
           <div className="flex items-center">
             <Link href="/">
               <>
-                <span className="sr-only">Your Company</span>
+                <span className="sr-only">{t('home.label')}</span>
                 <img
                   className="h-10 w-auto"
                   src="https://tailwindui.com/img/logos/mark.svg?color=white"
@@ -50,10 +43,7 @@ export default function Navbar() {
           </div>
           <div>
             <div className="ml-10 space-x-4">
-              <select onChange={handleLocaleChange} value={router.locale}>
-                <option value="en">🇺🇸 English</option>
-                <option value="es">es Espanol</option>
-              </select>
+              <LangSelect />
             </div>
           </div>
           <div className="ml-10 space-x-4">
