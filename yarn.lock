@@ -2873,7 +2873,7 @@
 
 "@storybook/addon-postcss@^2.0.0":
   version "2.0.0"
-  resolved "https://registry.npmjs.org/@storybook/addon-postcss/-/addon-postcss-2.0.0.tgz"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-postcss/-/addon-postcss-2.0.0.tgz#ec61cb9bb2662f408072b35c466c7df801c28498"
   integrity sha512-Nt82A7e9zJH4+A+VzLKKswUfru+T6FJTakj4dccP0i8DSn7a0CkzRPrLuZBq8tg4voV6gD74bcDf3gViCVBGtA==
   dependencies:
     "@storybook/node-logger" "^6.1.14"
@@ -12519,6 +12519,11 @@ react-docgen-typescript@^2.1.1:
   resolved "https://registry.npmjs.org/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz"
   integrity sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==
 
+react-docgen-typescript@^2.2.2:
+  version "2.2.2"
+  resolved "https://registry.yarnpkg.com/react-docgen-typescript/-/react-docgen-typescript-2.2.2.tgz#4611055e569edc071204aadb20e1c93e1ab1659c"
+  integrity sha512-tvg2ZtOpOi6QDwsb3GZhOjDkkX0h8Z2gipvTg6OVMUyoYoURhEiRNePT8NZItTVCDh39JJHnLdfCOkzoLbFnTg==
+
 react-docgen@^5.0.0:
   version "5.4.3"
   resolved "https://registry.npmjs.org/react-docgen/-/react-docgen-5.4.3.tgz"
@@ -13707,7 +13712,7 @@ store2@^2.12.0:
 
 storybook-css-modules-preset@^1.1.1:
   version "1.1.1"
-  resolved "https://registry.npmjs.org/storybook-css-modules-preset/-/storybook-css-modules-preset-1.1.1.tgz"
+  resolved "https://registry.yarnpkg.com/storybook-css-modules-preset/-/storybook-css-modules-preset-1.1.1.tgz#30310eab3c324cb944ea760ecd73b5341bcae6c6"
   integrity sha512-wyINPOtB/8SvU7J92ePAhciBk4xoHuwrcqDNyGnSwilwHjmtHwbeEgZ1//JALOTwMB10zwz3WPONRkWec9LdGw==
 
 stream-browserify@^2.0.1:
