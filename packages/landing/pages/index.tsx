@@ -3,6 +3,8 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import PrimaryLayout from '../components/layouts/primary/PrimaryLayout';
 
+import { Button } from '@10x/foundation/src/components/buttons/Button';
+
 // TODO: Lang enum in case of bigger lang amount
 // const changeLanguage = (i18n: any, locale: Locales) => {
 //   window.localStorage.setItem('user_locale', locale);
@@ -22,7 +24,7 @@ export default function Home() {
         </section>
 
         <div className="flex flex-1 justify-center">
-          {/* Button must be here */}
+          <Button />
         </div>
       </div>
     </PrimaryLayout>

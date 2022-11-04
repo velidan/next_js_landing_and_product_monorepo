@@ -1,11 +1,12 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "noEmit": true,
+    "baseUrl": ".",
+    "noEmit": false,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react",
+    "moduleResolution": "node",
     "outDir": "./dist"
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["node_modules"]
 }

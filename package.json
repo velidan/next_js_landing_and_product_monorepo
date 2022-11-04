@@ -5,6 +5,7 @@
     "postinstall": "lerna bootstrap --use-workspaces",
     "dev": "lerna run dev --parallel",
     "build": "lerna run build --parallel",
+    "export": "lerna run build:export --ignore=@10x/foundation --parallel",
     "landing:dev": "lerna run dev --scope=landing --stream",
     "landing:build": "cross-env NODE_ENV=production lerna run build --scope=landing --stream",
     "product:dev": "lerna run dev --scope=product --stream",
