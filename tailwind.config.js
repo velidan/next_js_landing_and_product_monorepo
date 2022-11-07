@@ -1,3 +1,4 @@
+console.log('TAILWIND BASE <<<<');
 module.exports = {
   content: [],
   // Ensure these match with .storybook/preview.js
