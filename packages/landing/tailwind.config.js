@@ -2,15 +2,20 @@ module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
     './components/**/*.{js,ts,jsx,tsx}',
+    '../foundation/src/**/*.{js,ts,jsx,tsx}',
   ],
-  // Ensure these match with .storybook/preview.js
+  darkMode: 'class',
   theme: {
     screens: {
-      xs: '375px',
-      sm: '600px',
-      md: '900px',
-      lg: '1200px',
+      xs: '640px',
+      sm: '768px',
+      md: '1024px',
+      lg: '1280px',
       xl: '1536px',
+    },
+    colors: {
+      primary: 'purple',
+      secondary: 'orange',
     },
   },
   plugins: [],

@@ -38,7 +38,7 @@ export function Button() {
         console.log('Hi.Button click!');
       }}
     >
-      I'm a Button!
+      <span className="bg-red-500 md:bg-purple-600">I'm a Button!</span>
     </button>
   );
 }
