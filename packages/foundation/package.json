@@ -17,7 +17,8 @@
     "url": "git+https://github.com/velidan/next_js_landing_and_product_monorepo.git"
   },
   "scripts": {
-    "dev": "webpack serve --mode=development",
+    "dev": "start-storybook -p 6006",
+    "dev:webpack": "webpack serve --mode=development",
     "build:wb": "webpack --mode=production --progress",
     "build": "rimraf ./dist && tsc",
     "test": "react-scripts test",

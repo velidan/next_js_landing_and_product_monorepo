@@ -6,11 +6,11 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx}',
     '../foundation/src/**/*.{js,ts,jsx,tsx}',
   ],
+  darkMode: 'class',
   theme: {
     fontFamily: {
       sans: ['Graphik', 'sans-serif'],
     },
-    darkMode: 'class',
     screens: {
       xs: '640px',
       sm: '768px',
